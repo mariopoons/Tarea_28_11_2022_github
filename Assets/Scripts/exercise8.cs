@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class exercise8 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int year;
+
+    private void Start()
     {
-        
+        LeapYear(year);
     }
 
-    // Update is called once per frame
-    void Update()
+    private int LeapYear(int leap)
     {
-        
+        if(leap % 4 == 0 && leap % 100 != 0 && leap % 400 == 0)
+        {
+            Debug.Log($"{leap} is a leap year.");
+            return leap;
+        }
+        else if (leap % 4 == 0 && leap % 100 != 0 && leap % 400 != 0)
+        {
+            Debug.Log($"{leap} is a leap year.");
+            return leap;
+        }
+        else if (leap % 4 == 0 && leap % 100 == 0 && leap % 400 == 0)
+        {
+            Debug.Log($"{leap} is a leap year.");
+            return leap;
+        }
+        else
+        {
+            Debug.Log($"{leap} is a leap year.");
+            return leap;
+        }
     }
 }

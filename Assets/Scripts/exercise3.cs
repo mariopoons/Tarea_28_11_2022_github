@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class exercise3 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int num1;
+    public int num2;
+
+    private void Start()
     {
-        
+        Calculation(num1, num2);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Calculation(int hola,int adios)
     {
-        
+        if (hola / adios == 0)
+        {
+            Debug.Log("This divisor is exact!");
+        }
+        else
+        {
+            Debug.Log("This divisor is not exact!");
+        }
     }
+
 }
