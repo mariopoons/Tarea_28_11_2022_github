@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class exercise10 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            GoingUp();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void GoingUp()
     {
-        
+        transform.localScale += Vector3.one;
     }
 }
